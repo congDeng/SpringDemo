@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="alien" class="org.example.Alien" autowire="byType">
+        <!--        <property name="com"   ref="com2" />-->
+        <property name="com">
+            <bean class="org.example.Desktop" primary="true"/>
+        </property>
+    </bean>
+
+    <bean id="com2" class="org.example.Laptop" lazy-init="true"/>
+
+</beans>
