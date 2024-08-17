@@ -31,7 +31,7 @@ public class Alien {
         return com;
     }
 
-    //  constructor injection
+    //  setter injection
     @Autowired
     public void setCom(Computer com) {
         this.com = com;
