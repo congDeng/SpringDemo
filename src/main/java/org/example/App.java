@@ -15,7 +15,10 @@ public class App {
 //        alien.coding();
 
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        context.getBean(Desktop.class).compile();
-        context.getBean(Desktop.class).compile();
+//        context.getBean(Desktop.class).compile();
+
+        Alien alien = context.getBean(Alien.class);
+        System.out.println(alien.getAge());
+        alien.coding();
     }
 }
